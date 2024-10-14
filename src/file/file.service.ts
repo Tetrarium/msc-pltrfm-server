@@ -1,8 +1,8 @@
-import * as fs from "fs";
-import * as path from "path";
-import * as uuid from "uuid";
+import * as fs from 'fs';
+import * as path from 'path';
+import * as uuid from 'uuid';
 
-import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 export enum FileType {
   AUDIO = 'audio',
@@ -11,8 +11,7 @@ export enum FileType {
 
 @Injectable()
 export class FileService {
-
-  createFile(type: FileType, file): string {
+  createFile(type: FileType, file: any): string {
     try {
       const fileExtension = file.originalname.split('.').pop();
       const fileName = uuid.v4() + '.' + fileExtension;
@@ -30,7 +29,5 @@ export class FileService {
     }
   }
 
-  removeFile(fileName: string) {
-
-  }
+  removeFile() {}
 }

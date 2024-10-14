@@ -1,8 +1,8 @@
-import * as mongoose from "mongoose";
+import * as mongoose from 'mongoose';
 
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
-import { Track } from "./track.schema";
+import { Track } from './track.schema';
 
 export type CommentDocument = Comment & Document;
 
